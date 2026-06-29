@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Passo a Passo Inscrição</title>
+    <link rel="stylesheet" href="src/css/style.css" />
+</head>
+
+<body>
+    <main class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div>
+                    <p class="step-label">PASSO 1</p>
+                    <h3>SEUS DADOS</h3>
+                </div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div>
+                    <p class="step-label">PASSO 2</p>
+                    <h3>ESCOLHA SEU PLANO</h3>
+                </div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div>
+                    <p class="step-label">PASSO 3</p>
+                    <h3>ADICIONAIS</h3>
+                </div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div>
+                    <p class="step-label">PASSO 4</p>
+                    <h3>RESUMO</h3>
+                </div>
+            </div>
+        </aside>
+        <!-- Conteúdo -->
+        <section class="form-panel">
+            <!-- ETAPA 1 -->
+            <div class="step step-1">
+                <div class="form-header">
+                    <h2>SEUS DADOS</h2>
+                    <p>Preencha seus dados para continuar a inscrição.</p>
+                </div>
+                <form id="formInscricao">
+                    <div class="campo">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" placeholder="EX: Neymar jr" required />
+                    </div>
+                    <div class="campo">
+                        <label for="email">Endereço de Email</label>
+                        <input type="email" id="email" name="email" placeholder="EX: neymarjr@lorem.com" required />
+                    </div>
+                    <div class="campo">
+                        <label for="telefone">Número de Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="EX: +1 234 567 890" />
+                    </div>
+                </form>
+                <div class="buttons">
+                    <button type="button">Próximo</button>
+                </div>
+            </div>
+            <!-- ETAPA 2 -->
+            <div class="step step-2">
+                <h2>Escolha seu plano</h2>
+                <div class="container-plans">
+                    <div class="card-arcade">
+                        <img src="src/assets/images/icon-arcade.svg" alt="Icone do plano Arcade" />
+                        <div class="card-info">
+                            <h3>Arcade</h3>
+                            <p>R$9,99/mo</p>
+                        </div>
+                    </div>
+                    <div class="card-advanced">
+                        <img src="src/assets/images/icon-advanced.svg" alt="Icone do plano Advanced" />
+                        <div class="card-info">
+                            <h3>Advanced</h3>
+                            <p>R$19,99/mo</p>
+                        </div>
+                    </div>
+                    <div class="card-pro">
+                        <img src="src/assets/images/icon-pro.svg" alt="Icone do plano Pro" />
+                        <div class="card-info">
+                            <h3>Pro</h3>
+                            <p>R$29,99/mo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="plan-toggle">
+                    <p>Monthly</p>
+                    <button class="toggle-button" type="button"></button>
+                    <p>Yearly</p>
+                </div>
+                <div class="buttons">
+                    <button type="button">Voltar</button>
+                    <button type="button">Próximo</button>
+                </div>
+            </div>
+            <!-- ETAPA 3 -->
+            <div class="step step-3">
+                <h2>Adicionais</h2>
+                <div class="container-add">
+                    <label>
+                        <input type="checkbox" />
+                        <div class="checkbox-description">
+                            <h3>Serviço de Suporte</h3>
+                            <p>Acesso a jogos online</p>
+                        </div>
+                        <p>R$:50,00/mo</p>
+                    </label>
+                </div>
+                <div class="container-add">
+                    <label>
+                        <input type="checkbox" />
+                        <div class="checkbox-description">
+                            <h3>Mais espaço</h3>
+                            <p>Acesso a mais espaço de armazenamento</p>
+                        </div>
+                        <p>R$:25,00/mo</p>
+                    </label>
+                </div>
+                <div class="container-add">
+                    <label>
+                        <input type="checkbox" />
+                        <div class="checkbox-description">
+                            <h3>Customização do perfil</h3>
+                            <p>Acesso a personalização avançada do seu perfil</p>
+                        </div>
+                        <p>R$:10,00/mo</p>
+                    </label>
+                </div>
+                <div class="buttons">
+                    <button type="button">Voltar</button>
+                    <button type="button">Próximo</button>
+                </div>
+            </div>
+            <!-- ETAPA 4 -->
+            <div class="step step-4">
+                <h2>Resumo</h2>
+                <p>Aqui vai o resumo do plano e dos adicionais escolhidos.</p>
+
+                <h3 id="summary-plan"></h3>
+
+                <p id="summary-addons"></p>
+
+                <p id="summary-total"></p>
+                <div class="buttons">
+                    <button type="button">Voltar</button>
+                    <button type="button">Confirmar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="src/js/script.js"></script>
+</body>
+
+</html>
