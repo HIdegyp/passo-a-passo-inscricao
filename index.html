@@ -1,164 +1,368 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Passo a Passo Inscrição</title>
-    <link rel="stylesheet" href="src/css/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multi-step Form — Personal info</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="src/css/style.css" />
 </head>
 
 <body>
-    <main class="container">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <div class="step-card">
-                <div class="step-number">1</div>
-                <div>
-                    <p class="step-label">PASSO 1</p>
-                    <h3>SEUS DADOS</h3>
-                </div>
-            </div>
-            <div class="step-card">
-                <div class="step-number">2</div>
-                <div>
-                    <p class="step-label">PASSO 2</p>
-                    <h3>ESCOLHA SEU PLANO</h3>
-                </div>
-            </div>
-            <div class="step-card">
-                <div class="step-number">3</div>
-                <div>
-                    <p class="step-label">PASSO 3</p>
-                    <h3>ADICIONAIS</h3>
-                </div>
-            </div>
-            <div class="step-card">
-                <div class="step-number">4</div>
-                <div>
-                    <p class="step-label">PASSO 4</p>
-                    <h3>RESUMO</h3>
-                </div>
-            </div>
-        </aside>
-        <!-- Conteúdo -->
-        <section class="form-panel">
-            <!-- ETAPA 1 -->
-            <div class="step step-1">
-                <div class="form-header">
-                    <h2>SEUS DADOS</h2>
-                    <p>Preencha seus dados para continuar a inscrição.</p>
-                </div>
-                <form id="formInscricao">
-                    <div class="campo">
-                        <label for="nome">Nome</label>
-                        <input type="text" id="nome" name="nome" placeholder="EX: Neymar jr" required />
-                    </div>
-                    <div class="campo">
-                        <label for="email">Endereço de Email</label>
-                        <input type="email" id="email" name="email" placeholder="EX: neymarjr@lorem.com" required />
-                    </div>
-                    <div class="campo">
-                        <label for="telefone">Número de Telefone</label>
-                        <input type="tel" id="telefone" name="telefone" placeholder="EX: +1 234 567 890" />
-                    </div>
-                </form>
-                <div class="buttons">
-                    <button type="button">Próximo</button>
-                </div>
-            </div>
-            <!-- ETAPA 2 -->
-            <div class="step step-2">
-                <h2>Escolha seu plano</h2>
-                <div class="container-plans">
-                    <div class="card-arcade">
-                        <img src="src/assets/images/icon-arcade.svg" alt="Icone do plano Arcade" />
-                        <div class="card-info">
-                            <h3>Arcade</h3>
-                            <p>R$9,99/mo</p>
-                        </div>
-                    </div>
-                    <div class="card-advanced">
-                        <img src="src/assets/images/icon-advanced.svg" alt="Icone do plano Advanced" />
-                        <div class="card-info">
-                            <h3>Advanced</h3>
-                            <p>R$19,99/mo</p>
-                        </div>
-                    </div>
-                    <div class="card-pro">
-                        <img src="src/assets/images/icon-pro.svg" alt="Icone do plano Pro" />
-                        <div class="card-info">
-                            <h3>Pro</h3>
-                            <p>R$29,99/mo</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="plan-toggle">
-                    <p>Monthly</p>
-                    <button class="toggle-button" type="button"></button>
-                    <p>Yearly</p>
-                </div>
-                <div class="buttons">
-                    <button type="button">Voltar</button>
-                    <button type="button">Próximo</button>
-                </div>
-            </div>
-            <!-- ETAPA 3 -->
-            <div class="step step-3">
-                <h2>Adicionais</h2>
-                <div class="container-add">
-                    <label>
-                        <input type="checkbox" />
-                        <div class="checkbox-description">
-                            <h3>Serviço de Suporte</h3>
-                            <p>Acesso a jogos online</p>
-                        </div>
-                        <p>R$:50,00/mo</p>
-                    </label>
-                </div>
-                <div class="container-add">
-                    <label>
-                        <input type="checkbox" />
-                        <div class="checkbox-description">
-                            <h3>Mais espaço</h3>
-                            <p>Acesso a mais espaço de armazenamento</p>
-                        </div>
-                        <p>R$:25,00/mo</p>
-                    </label>
-                </div>
-                <div class="container-add">
-                    <label>
-                        <input type="checkbox" />
-                        <div class="checkbox-description">
-                            <h3>Customização do perfil</h3>
-                            <p>Acesso a personalização avançada do seu perfil</p>
-                        </div>
-                        <p>R$:10,00/mo</p>
-                    </label>
-                </div>
-                <div class="buttons">
-                    <button type="button">Voltar</button>
-                    <button type="button">Próximo</button>
-                </div>
-            </div>
-            <!-- ETAPA 4 -->
-            <div class="step step-4">
-                <h2>Resumo</h2>
-                <p>Aqui vai o resumo do plano e dos adicionais escolhidos.</p>
+  <main class="app">
+    <div class="card">
+      <aside class="sidebar" aria-label="Form steps">
+        <ol class="steps">
+          <li class="steps__item steps__item--active" data-step="1">
+            <span class="steps__number" aria-hidden="true">1</span>
+            <span class="steps__text">
+              <span class="steps__eyebrow">Step 1</span>
+              <span class="steps__title">Your info</span>
+            </span>
+          </li>
+          <li class="steps__item" data-step="2">
+            <span class="steps__number" aria-hidden="true">2</span>
+            <span class="steps__text">
+              <span class="steps__eyebrow">Step 2</span>
+              <span class="steps__title">Select plan</span>
+            </span>
+          </li>
+          <li class="steps__item" data-step="3">
+            <span class="steps__number" aria-hidden="true">3</span>
+            <span class="steps__text">
+              <span class="steps__eyebrow">Step 3</span>
+              <span class="steps__title">Add-ons</span>
+            </span>
+          </li>
+          <li class="steps__item" data-step="4">
+            <span class="steps__number" aria-hidden="true">4</span>
+            <span class="steps__text">
+              <span class="steps__eyebrow">Step 4</span>
+              <span class="steps__title">Summary</span>
+            </span>
+          </li>
+        </ol>
+      </aside>
 
-                <h3 id="summary-plan"></h3>
+      <section class="form-panel">
+        <!-- Step 1 -->
+        <div class="step step--active" data-panel="1">
+          <header class="form-header">
+            <h1 class="form-header__title">Personal info</h1>
+            <p class="form-header__subtitle">
+              Please provide your name, email address, and phone number.
+            </p>
+          </header>
 
-                <p id="summary-addons"></p>
-
-                <p id="summary-total"></p>
-                <div class="buttons">
-                    <button type="button">Voltar</button>
-                    <button type="button">Confirmar</button>
-                </div>
+          <form id="form-step-1" class="info-form" novalidate>
+            <div class="field">
+              <div class="field__meta">
+                <label class="field__label" for="name">Name</label>
+                <span class="field__error" id="name-error" aria-live="polite"></span>
+              </div>
+              <input
+                class="field__input"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="e.g. Stephen King"
+                autocomplete="name"
+                aria-describedby="name-error"
+              />
             </div>
-        </section>
-    </main>
-    <script src="src/js/script.js"></script>
+
+            <div class="field">
+              <div class="field__meta">
+                <label class="field__label" for="email">Email Address</label>
+                <span class="field__error" id="email-error" aria-live="polite"></span>
+              </div>
+              <input
+                class="field__input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="e.g. stephenking@lorem.com"
+                autocomplete="email"
+                aria-describedby="email-error"
+              />
+            </div>
+
+            <div class="field">
+              <div class="field__meta">
+                <label class="field__label" for="phone">Phone Number</label>
+                <span class="field__error" id="phone-error" aria-live="polite"></span>
+              </div>
+              <input
+                class="field__input"
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="e.g. +1 234 567 890"
+                autocomplete="tel"
+                aria-describedby="phone-error"
+              />
+            </div>
+
+            <div class="form-actions form-actions--end">
+              <button class="btn btn--primary" type="submit">Next Step</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step" data-panel="2" hidden>
+          <header class="form-header">
+            <h1 class="form-header__title">Select your plan</h1>
+            <p class="form-header__subtitle">
+              You have the option of monthly or yearly billing.
+            </p>
+          </header>
+
+          <form id="form-step-2" class="plan-form" novalidate>
+            <fieldset class="plan-options">
+              <legend class="visually-hidden">Select a plan</legend>
+
+              <label class="plan-card">
+                <input
+                  class="plan-card__input"
+                  type="radio"
+                  name="plan"
+                  value="arcade"
+                  checked
+                />
+                <span class="plan-card__body">
+                  <img
+                    class="plan-card__icon"
+                    src="src/assets/images/icon-arcade.svg"
+                    alt=""
+                    width="40"
+                    height="40"
+                  />
+                  <span class="plan-card__info">
+                    <span class="plan-card__name">Arcade</span>
+                    <span class="plan-card__price" data-price-monthly="$9/mo" data-price-yearly="$90/yr">$9/mo</span>
+                    <span class="plan-card__bonus" hidden>2 months free</span>
+                  </span>
+                </span>
+              </label>
+
+              <label class="plan-card">
+                <input
+                  class="plan-card__input"
+                  type="radio"
+                  name="plan"
+                  value="advanced"
+                />
+                <span class="plan-card__body">
+                  <img
+                    class="plan-card__icon"
+                    src="src/assets/images/icon-advanced.svg"
+                    alt=""
+                    width="40"
+                    height="40"
+                  />
+                  <span class="plan-card__info">
+                    <span class="plan-card__name">Advanced</span>
+                    <span class="plan-card__price" data-price-monthly="$12/mo" data-price-yearly="$120/yr">$12/mo</span>
+                    <span class="plan-card__bonus" hidden>2 months free</span>
+                  </span>
+                </span>
+              </label>
+
+              <label class="plan-card">
+                <input
+                  class="plan-card__input"
+                  type="radio"
+                  name="plan"
+                  value="pro"
+                />
+                <span class="plan-card__body">
+                  <img
+                    class="plan-card__icon"
+                    src="src/assets/images/icon-pro.svg"
+                    alt=""
+                    width="40"
+                    height="40"
+                  />
+                  <span class="plan-card__info">
+                    <span class="plan-card__name">Pro</span>
+                    <span class="plan-card__price" data-price-monthly="$15/mo" data-price-yearly="$150/yr">$15/mo</span>
+                    <span class="plan-card__bonus" hidden>2 months free</span>
+                  </span>
+                </span>
+              </label>
+            </fieldset>
+
+            <div class="billing-toggle">
+              <span class="billing-toggle__label billing-toggle__label--active" data-billing-label="monthly">Monthly</span>
+              <label class="billing-toggle__switch">
+                <span class="visually-hidden">Toggle yearly billing</span>
+                <input
+                  class="billing-toggle__input"
+                  type="checkbox"
+                  id="billing-yearly"
+                  name="billing"
+                  value="yearly"
+                  role="switch"
+                  aria-checked="false"
+                />
+                <span class="billing-toggle__track" aria-hidden="true">
+                  <span class="billing-toggle__thumb"></span>
+                </span>
+              </label>
+              <span class="billing-toggle__label" data-billing-label="yearly">Yearly</span>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn btn--ghost" type="button" data-prev>Go Back</button>
+              <button class="btn btn--primary" type="submit">Next Step</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step" data-panel="3" hidden>
+          <header class="form-header">
+            <h1 class="form-header__title">Pick add-ons</h1>
+            <p class="form-header__subtitle">
+              Add-ons help enhance your gaming experience.
+            </p>
+          </header>
+
+          <form id="form-step-3" class="addons-form" novalidate>
+            <fieldset class="addon-options">
+              <legend class="visually-hidden">Pick add-ons</legend>
+
+              <label class="addon-card">
+                <input
+                  class="addon-card__input"
+                  type="checkbox"
+                  name="addons"
+                  value="online-service"
+                  checked
+                />
+                <span class="addon-card__body">
+                  <span class="addon-card__check" aria-hidden="true"></span>
+                  <span class="addon-card__info">
+                    <span class="addon-card__name">Online service</span>
+                    <span class="addon-card__desc">Access to multiplayer games</span>
+                  </span>
+                  <span
+                    class="addon-card__price"
+                    data-price-monthly="+$1/mo"
+                    data-price-yearly="+$10/yr"
+                  >+$1/mo</span>
+                </span>
+              </label>
+
+              <label class="addon-card">
+                <input
+                  class="addon-card__input"
+                  type="checkbox"
+                  name="addons"
+                  value="larger-storage"
+                  checked
+                />
+                <span class="addon-card__body">
+                  <span class="addon-card__check" aria-hidden="true"></span>
+                  <span class="addon-card__info">
+                    <span class="addon-card__name">Larger storage</span>
+                    <span class="addon-card__desc">Extra 1TB of cloud save</span>
+                  </span>
+                  <span
+                    class="addon-card__price"
+                    data-price-monthly="+$2/mo"
+                    data-price-yearly="+$20/yr"
+                  >+$2/mo</span>
+                </span>
+              </label>
+
+              <label class="addon-card">
+                <input
+                  class="addon-card__input"
+                  type="checkbox"
+                  name="addons"
+                  value="customizable-profile"
+                />
+                <span class="addon-card__body">
+                  <span class="addon-card__check" aria-hidden="true"></span>
+                  <span class="addon-card__info">
+                    <span class="addon-card__name">Customizable Profile</span>
+                    <span class="addon-card__desc">Custom theme on your profile</span>
+                  </span>
+                  <span
+                    class="addon-card__price"
+                    data-price-monthly="+$2/mo"
+                    data-price-yearly="+$20/yr"
+                  >+$2/mo</span>
+                </span>
+              </label>
+            </fieldset>
+
+            <div class="form-actions">
+              <button class="btn btn--ghost" type="button" data-prev>Go Back</button>
+              <button class="btn btn--primary" type="submit">Next Step</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step" data-panel="4" hidden>
+          <header class="form-header">
+            <h1 class="form-header__title">Finishing up</h1>
+            <p class="form-header__subtitle">
+              Double-check everything looks OK before confirming.
+            </p>
+          </header>
+
+          <div class="summary">
+            <div class="summary__card">
+              <div class="summary__plan">
+                <div class="summary__plan-info">
+                  <p class="summary__plan-name" data-summary-plan-name>Arcade (Monthly)</p>
+                  <button
+                    class="summary__change"
+                    type="button"
+                    data-summary-change
+                  >
+                    Change
+                  </button>
+                </div>
+                <p class="summary__plan-price" data-summary-plan-price>$9/mo</p>
+              </div>
+
+              <div class="summary__addons" data-summary-addons hidden></div>
+            </div>
+
+            <div class="summary__total">
+              <p class="summary__total-label" data-summary-total-label>
+                Total (per month)
+              </p>
+              <p
+                class="summary__total-price"
+                data-summary-total-price
+                aria-live="polite"
+              >
+                +$12/mo
+              </p>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn--ghost" type="button" data-prev>Go Back</button>
+            <button class="btn btn--confirm" type="button" data-confirm>
+              Confirm
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="src/js/script.js" defer></script>
 </body>
 
 </html>
