@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Multi-step Form — Personal info</title>
+  <title>Formulário em etapas — Informações pessoais</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -14,34 +14,34 @@
 <body>
   <main class="app">
     <div class="card">
-      <aside class="sidebar" aria-label="Form steps">
+      <aside class="sidebar" aria-label="Etapas do formulário">
         <ol class="steps">
           <li class="steps__item steps__item--active" data-step="1">
             <span class="steps__number" aria-hidden="true">1</span>
             <span class="steps__text">
-              <span class="steps__eyebrow">Step 1</span>
-              <span class="steps__title">Your info</span>
+              <span class="steps__eyebrow">Etapa 1</span>
+              <span class="steps__title">Seus dados</span>
             </span>
           </li>
           <li class="steps__item" data-step="2">
             <span class="steps__number" aria-hidden="true">2</span>
             <span class="steps__text">
-              <span class="steps__eyebrow">Step 2</span>
-              <span class="steps__title">Select plan</span>
+              <span class="steps__eyebrow">Etapa 2</span>
+              <span class="steps__title">Escolher plano</span>
             </span>
           </li>
           <li class="steps__item" data-step="3">
             <span class="steps__number" aria-hidden="true">3</span>
             <span class="steps__text">
-              <span class="steps__eyebrow">Step 3</span>
-              <span class="steps__title">Add-ons</span>
+              <span class="steps__eyebrow">Etapa 3</span>
+              <span class="steps__title">Extras</span>
             </span>
           </li>
           <li class="steps__item" data-step="4">
             <span class="steps__number" aria-hidden="true">4</span>
             <span class="steps__text">
-              <span class="steps__eyebrow">Step 4</span>
-              <span class="steps__title">Summary</span>
+              <span class="steps__eyebrow">Etapa 4</span>
+              <span class="steps__title">Resumo</span>
             </span>
           </li>
         </ol>
@@ -51,16 +51,16 @@
         <!-- Step 1 -->
         <div class="step step--active" data-panel="1">
           <header class="form-header">
-            <h1 class="form-header__title">Personal info</h1>
+            <h1 class="form-header__title">Informações pessoais</h1>
             <p class="form-header__subtitle">
-              Please provide your name, email address, and phone number.
+              Informe seu nome, e-mail e número de telefone.
             </p>
           </header>
 
           <form id="form-step-1" class="info-form" novalidate>
             <div class="field">
               <div class="field__meta">
-                <label class="field__label" for="name">Name</label>
+                <label class="field__label" for="name">Nome</label>
                 <span class="field__error" id="name-error" aria-live="polite"></span>
               </div>
               <input
@@ -68,7 +68,7 @@
                 type="text"
                 id="name"
                 name="name"
-                placeholder="e.g. Stephen King"
+                placeholder="ex.: Stephen King"
                 autocomplete="name"
                 aria-describedby="name-error"
               />
@@ -76,7 +76,7 @@
 
             <div class="field">
               <div class="field__meta">
-                <label class="field__label" for="email">Email Address</label>
+                <label class="field__label" for="email">E-mail</label>
                 <span class="field__error" id="email-error" aria-live="polite"></span>
               </div>
               <input
@@ -84,7 +84,7 @@
                 type="email"
                 id="email"
                 name="email"
-                placeholder="e.g. stephenking@lorem.com"
+                placeholder="ex.: stephenking@lorem.com"
                 autocomplete="email"
                 aria-describedby="email-error"
               />
@@ -92,7 +92,7 @@
 
             <div class="field">
               <div class="field__meta">
-                <label class="field__label" for="phone">Phone Number</label>
+                <label class="field__label" for="phone">Telefone</label>
                 <span class="field__error" id="phone-error" aria-live="polite"></span>
               </div>
               <input
@@ -100,14 +100,14 @@
                 type="tel"
                 id="phone"
                 name="phone"
-                placeholder="e.g. +1 234 567 890"
+                placeholder="ex.: +1 234 567 890"
                 autocomplete="tel"
                 aria-describedby="phone-error"
               />
             </div>
 
             <div class="form-actions form-actions--end">
-              <button class="btn btn--primary" type="submit">Next Step</button>
+              <button class="btn btn--primary" type="submit">Próxima etapa</button>
             </div>
           </form>
         </div>
@@ -115,15 +115,15 @@
         <!-- Step 2 -->
         <div class="step" data-panel="2" hidden>
           <header class="form-header">
-            <h1 class="form-header__title">Select your plan</h1>
+            <h1 class="form-header__title">Escolha seu plano</h1>
             <p class="form-header__subtitle">
-              You have the option of monthly or yearly billing.
+              Você pode optar pela cobrança mensal ou anual.
             </p>
           </header>
 
           <form id="form-step-2" class="plan-form" novalidate>
             <fieldset class="plan-options">
-              <legend class="visually-hidden">Select a plan</legend>
+              <legend class="visually-hidden">Selecione um plano</legend>
 
               <label class="plan-card">
                 <input
@@ -143,8 +143,8 @@
                   />
                   <span class="plan-card__info">
                     <span class="plan-card__name">Arcade</span>
-                    <span class="plan-card__price" data-price-monthly="$9/mo" data-price-yearly="$90/yr">$9/mo</span>
-                    <span class="plan-card__bonus" hidden>2 months free</span>
+                    <span class="plan-card__price" data-price-monthly="$9/mês" data-price-yearly="$90/ano">$9/mês</span>
+                    <span class="plan-card__bonus" hidden>2 meses grátis</span>
                   </span>
                 </span>
               </label>
@@ -166,8 +166,8 @@
                   />
                   <span class="plan-card__info">
                     <span class="plan-card__name">Advanced</span>
-                    <span class="plan-card__price" data-price-monthly="$12/mo" data-price-yearly="$120/yr">$12/mo</span>
-                    <span class="plan-card__bonus" hidden>2 months free</span>
+                    <span class="plan-card__price" data-price-monthly="$12/mês" data-price-yearly="$120/ano">$12/mês</span>
+                    <span class="plan-card__bonus" hidden>2 meses grátis</span>
                   </span>
                 </span>
               </label>
@@ -189,17 +189,17 @@
                   />
                   <span class="plan-card__info">
                     <span class="plan-card__name">Pro</span>
-                    <span class="plan-card__price" data-price-monthly="$15/mo" data-price-yearly="$150/yr">$15/mo</span>
-                    <span class="plan-card__bonus" hidden>2 months free</span>
+                    <span class="plan-card__price" data-price-monthly="$15/mês" data-price-yearly="$150/ano">$15/mês</span>
+                    <span class="plan-card__bonus" hidden>2 meses grátis</span>
                   </span>
                 </span>
               </label>
             </fieldset>
 
             <div class="billing-toggle">
-              <span class="billing-toggle__label billing-toggle__label--active" data-billing-label="monthly">Monthly</span>
+              <span class="billing-toggle__label billing-toggle__label--active" data-billing-label="monthly">Mensal</span>
               <label class="billing-toggle__switch">
-                <span class="visually-hidden">Toggle yearly billing</span>
+                <span class="visually-hidden">Alternar cobrança anual</span>
                 <input
                   class="billing-toggle__input"
                   type="checkbox"
@@ -213,12 +213,12 @@
                   <span class="billing-toggle__thumb"></span>
                 </span>
               </label>
-              <span class="billing-toggle__label" data-billing-label="yearly">Yearly</span>
+              <span class="billing-toggle__label" data-billing-label="yearly">Anual</span>
             </div>
 
             <div class="form-actions">
-              <button class="btn btn--ghost" type="button" data-prev>Go Back</button>
-              <button class="btn btn--primary" type="submit">Next Step</button>
+              <button class="btn btn--ghost" type="button" data-prev>Voltar</button>
+              <button class="btn btn--primary" type="submit">Próxima etapa</button>
             </div>
           </form>
         </div>
@@ -226,15 +226,15 @@
         <!-- Step 3 -->
         <div class="step" data-panel="3" hidden>
           <header class="form-header">
-            <h1 class="form-header__title">Pick add-ons</h1>
+            <h1 class="form-header__title">Escolha os extras</h1>
             <p class="form-header__subtitle">
-              Add-ons help enhance your gaming experience.
+              Os extras ajudam a melhorar sua experiência de jogo.
             </p>
           </header>
 
           <form id="form-step-3" class="addons-form" novalidate>
             <fieldset class="addon-options">
-              <legend class="visually-hidden">Pick add-ons</legend>
+              <legend class="visually-hidden">Escolha os extras</legend>
 
               <label class="addon-card">
                 <input
@@ -247,14 +247,14 @@
                 <span class="addon-card__body">
                   <span class="addon-card__check" aria-hidden="true"></span>
                   <span class="addon-card__info">
-                    <span class="addon-card__name">Online service</span>
-                    <span class="addon-card__desc">Access to multiplayer games</span>
+                    <span class="addon-card__name">Serviço online</span>
+                    <span class="addon-card__desc">Acesso a jogos multiplayer</span>
                   </span>
                   <span
                     class="addon-card__price"
-                    data-price-monthly="+$1/mo"
-                    data-price-yearly="+$10/yr"
-                  >+$1/mo</span>
+                    data-price-monthly="+$1/mês"
+                    data-price-yearly="+$10/ano"
+                  >+$1/mês</span>
                 </span>
               </label>
 
@@ -269,14 +269,14 @@
                 <span class="addon-card__body">
                   <span class="addon-card__check" aria-hidden="true"></span>
                   <span class="addon-card__info">
-                    <span class="addon-card__name">Larger storage</span>
-                    <span class="addon-card__desc">Extra 1TB of cloud save</span>
+                    <span class="addon-card__name">Mais armazenamento</span>
+                    <span class="addon-card__desc">1 TB extra de salvamento na nuvem</span>
                   </span>
                   <span
                     class="addon-card__price"
-                    data-price-monthly="+$2/mo"
-                    data-price-yearly="+$20/yr"
-                  >+$2/mo</span>
+                    data-price-monthly="+$2/mês"
+                    data-price-yearly="+$20/ano"
+                  >+$2/mês</span>
                 </span>
               </label>
 
@@ -290,21 +290,21 @@
                 <span class="addon-card__body">
                   <span class="addon-card__check" aria-hidden="true"></span>
                   <span class="addon-card__info">
-                    <span class="addon-card__name">Customizable Profile</span>
-                    <span class="addon-card__desc">Custom theme on your profile</span>
+                    <span class="addon-card__name">Perfil personalizável</span>
+                    <span class="addon-card__desc">Tema personalizado no seu perfil</span>
                   </span>
                   <span
                     class="addon-card__price"
-                    data-price-monthly="+$2/mo"
-                    data-price-yearly="+$20/yr"
-                  >+$2/mo</span>
+                    data-price-monthly="+$2/mês"
+                    data-price-yearly="+$20/ano"
+                  >+$2/mês</span>
                 </span>
               </label>
             </fieldset>
 
             <div class="form-actions">
-              <button class="btn btn--ghost" type="button" data-prev>Go Back</button>
-              <button class="btn btn--primary" type="submit">Next Step</button>
+              <button class="btn btn--ghost" type="button" data-prev>Voltar</button>
+              <button class="btn btn--primary" type="submit">Próxima etapa</button>
             </div>
           </form>
         </div>
@@ -312,9 +312,9 @@
         <!-- Step 4 -->
         <div class="step" data-panel="4" hidden>
           <header class="form-header">
-            <h1 class="form-header__title">Finishing up</h1>
+            <h1 class="form-header__title">Quase lá</h1>
             <p class="form-header__subtitle">
-              Double-check everything looks OK before confirming.
+              Confira se está tudo certo antes de confirmar.
             </p>
           </header>
 
@@ -322,16 +322,16 @@
             <div class="summary__card">
               <div class="summary__plan">
                 <div class="summary__plan-info">
-                  <p class="summary__plan-name" data-summary-plan-name>Arcade (Monthly)</p>
+                  <p class="summary__plan-name" data-summary-plan-name>Arcade (Mensal)</p>
                   <button
                     class="summary__change"
                     type="button"
                     data-summary-change
                   >
-                    Change
+                    Alterar
                   </button>
                 </div>
-                <p class="summary__plan-price" data-summary-plan-price>$9/mo</p>
+                <p class="summary__plan-price" data-summary-plan-price>$9/mês</p>
               </div>
 
               <div class="summary__addons" data-summary-addons hidden></div>
@@ -339,30 +339,47 @@
 
             <div class="summary__total">
               <p class="summary__total-label" data-summary-total-label>
-                Total (per month)
+                Total (por mês)
               </p>
               <p
                 class="summary__total-price"
                 data-summary-total-price
                 aria-live="polite"
               >
-                +$12/mo
+                +$12/mês
               </p>
             </div>
           </div>
 
           <div class="form-actions">
-            <button class="btn btn--ghost" type="button" data-prev>Go Back</button>
+            <button class="btn btn--ghost" type="button" data-prev>Voltar</button>
             <button class="btn btn--confirm" type="button" data-confirm>
-              Confirm
+              Confirmar
             </button>
           </div>
+        </div>
+
+        <!-- Success / thank you -->
+        <div class="thank-you" data-thank-you hidden>
+          <img
+            class="thank-you__icon"
+            src="src/assets/images/icon-thank-you.svg"
+            alt=""
+            width="80"
+            height="80"
+          />
+          <h1 class="thank-you__title">Obrigado!</h1>
+          <p class="thank-you__text">
+            Obrigado por confirmar sua assinatura! Esperamos que você se divirta
+            usando nossa plataforma. Se precisar de suporte, envie um e-mail para
+            support@loremgaming.com.
+          </p>
         </div>
       </section>
     </div>
   </main>
 
-  <script src="src/js/script.js" defer></script>
+  <script src="js/script.js" defer></script>
 </body>
 
 </html>
